@@ -1,0 +1,27 @@
+1.	User downloads the app from play_store/apple_store
+2.  Application asks to enter the phone number. Payse server generates an OTP and sends it the customer via SMS using an introductory message about Payse. 
+    Customer enters the OTP, which gets authenticated against the Payse server. 
+3.	Application sends the OTP to this no. and auto reads it to verify the phone no.
+   [After doing some research- Auto verification of OTP might not be a good idea, since it can be vulnerable for potential hacks. Manual verification, as done in other apps. 
+    You can use SMPP protocol to push messages to the intended recipient. There are few open source implementation which provide smpp protocol implementation out of the box. ]
+4.	Next, user sign in with google. 
+   [- This links user's name + email id + whole bunch of friend's email ids]
+   
+5.  At this stage, Payse creates the customer id which maps every customer detail
+   =============================================================================================================================
+    Rest API’S for the USER
+   +(contact,name) -> Register
+   +(Unique Id) ->    Combination of email Id+Phone No+ Uniquely generated Integer.
+   =============================================================================================================================
+  +Database
+  +==========================================================================================
+  Usertable
+  +	userID_Unique : To give it to the merchants when settling a payment. 
+  +	Name
+  +	Contact
+  + Bank Details
+  +==========================================================================================	
+   First factor of authentication: combination of device + application download related no. + sim no . - jumbled up and encrypted
+  - need to understand how to use it. 
+  
+
