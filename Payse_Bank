@@ -1,0 +1,8 @@
+Payse verifies the first factor of authentication - does bank will allow us to own first factor of authentication
+Once verified, central Payse server calls respective Bank's Payse server with initial and end coordinates of the transaction once user has selected the bank and hits the button
+Next, customer gets an in-app popup with key pad to authorize transaction with Mpin
+This page is hosted by Payse server staying within the respective bank's firewall - need to learn the exact specifications
+To the consumer it feels like the app feature
+Bank's Payse server takes the initial and end coordinates and hit the IMPS payment gateway
+Then Bank's Payse server gives back the final status of transaction to the central Payse server
+Payse notifies both the parties about the success of transaction
