@@ -1,0 +1,20 @@
+Payse installed in the existing POS of the merchants or install the merchant version of the app in their mobile.
+Sign-Up using the Merchandise Name, their address, phone number, email-id. -> Single sign on. (SSO).
+========================================================================
+Merchants Table
++ userName
++ emailId
++ phoneNumber
++ uniqueId
+========================================================================
+Merchant requests the phone number or the userId of the customer.
+Merchant sends the payment request using the customers unique id via Payse server, using SMPP, HTTPS, REST calls.
+Payse authenticates the merchant before the request reaches the merchant. 
+========================================================================
+-> Each merchant version of the app which is downloaded or installed in the pos has an associated application id. Payse generates an
+unique id application id + merchants name + random integer. This unique ID is stored in Payse server. So whenever a merchant requests
+a payment, payse server verifies his unique id.
+=========================================================================
+Customer acknowledges the request by clicking on the notification and hits the Pay button
+Till here pages are hosted by central Payse server
+
