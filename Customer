@@ -23,5 +23,32 @@
   +==========================================================================================	
    First factor of authentication: combination of device + application download related no. + sim no . - jumbled up and encrypted
   - need to understand how to use it. 
+  ===========================================================================================
+  Linking funding source:
+  User selects a bank from the drop down
+  Enters the account no.
+  Bank saves this information securely with Payse
+  ============================================================================================
+  AccountsTable
+  + userID_Unique
+  + bankName
+  + bankAccountNumber
+  ============================================================================================
+  Each customer can have multiple bank accounts, which will be listed in the dropdown list of payse application. When a customer
+  selects a particular bank to transfer the amount, payse server returns the account details attached.
+  
+  This payse server is located behind banks firewall. This gives us an opportunity to associate customers bank details with the
+  account number to reduce the security vulnerabilities.
+  =============================================================================================
+  Example Model:
+  1. Customer selects State Bank of India from the drop down list. 
+  2. He enters 1234-5678-1236-2356 as his account number and submits the request. 
+  3. Now payse server within SBI's firewall needs to authenticate if the bank account exists or not, 
+   -> give an api call, www.sbi.com/verifyaccountdetails/1234-5678-1236-2356
+   -> returns a good response if the account exists with SBI
+  4. Should we have a server within banks firewall or can we utilize their existing api's? Having a server within their firewall
+     is technically feasible. 
+  ==============================================================================================
+
   
 
