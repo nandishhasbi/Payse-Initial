@@ -6,3 +6,10 @@ To the consumer it feels like the app feature
 Bank's Payse server takes the initial and end coordinates and hit the IMPS payment gateway
 Then Bank's Payse server gives back the final status of transaction to the central Payse server
 Payse notifies both the parties about the success of transaction
+================================================================================================================
+Merchant sends the payment request->[Payse independent server sends the request to customer]-> Customer clicks on the notification
+and clicks on pay by selecting the bank -> [This hits the payse server which is located within the selected banks firewall]->
+now the payse bank server verifies all the required credentials and calls the appropriate api's to complete the transaction->
+Banks Internal Payse server gives back the final status of transaction to the central payse server-> Payse notifies
+both the parties about the success of the transaction. 
+=================================================================================================================
