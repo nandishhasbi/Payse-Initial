@@ -16,5 +16,12 @@ unique id application id + merchants name + random integer. This unique ID is st
 a payment, payse server verifies his unique id.
 =========================================================================
 Customer acknowledges the request by clicking on the notification and hits the Pay button
+=========================================================================
+Transaction Table
++ Merchants_UniqueId
++ Customers_UniqueId
++ Price
++ Email_Ids of both
+=========================================================================
 Till here pages are hosted by central Payse server
 
